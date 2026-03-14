@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        - PUBLIC_MEDUSA_BACKEND_URL=${PUBLIC_MEDUSA_BACKEND_URL}
+    ports:
+      - "8080:4321"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=4321
+      - PUBLIC_MEDUSA_BACKEND_URL=${PUBLIC_MEDUSA_BACKEND_URL}
+    restart: unless-stopped

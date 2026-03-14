@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/Login.css';
+import App from '../components/App';
+
+export const prerender = false;
+---
+
+<Layout>
+  <App client:load />
+</Layout>
